@@ -1,0 +1,10 @@
+<%= form_for @changeset, "#", [phx_change: :validate, phx_submit: :evaluate], fn f -> %>
+
+  <%= label f, :input %>
+  <%= text_input f, :input %>
+  <%= error_tag f, :input %>
+
+  <div>
+    <%= submit "Add", phx_disable_with: "Saving..." %>
+  </div>
+<% end %>
